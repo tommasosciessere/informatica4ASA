@@ -2,4 +2,4 @@
 Se qualche programmatore mi vede... mi hanno obbligato a farlo🤥
 ## Argomenti
 ### [Introduzione](dispensa)
-### [Lista esercizi assegnati](esercizi)
+### [Lista esercizi assegnati](esercizi) 
