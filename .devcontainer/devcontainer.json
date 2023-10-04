@@ -1,0 +1,26 @@
+{
+    "name": "HTML",
+    // "dockerFile": "Dockerfile",
+    // "build": {
+    //     "dockerfile": "Dockerfile"
+    // },
+    "workspaceFolder": "/",
+    // "settings": {
+    //     "python.pythonPath": "/usr/bin/python3",
+    //     "jupyter.notebookFileRoot": "/workspace"
+    // },
+    // "postCreateCommand": "python3 -m octave_kernel.install --user",
+    "customizations": { 
+        "vscode": {
+            "extensions": [
+                "ms-vscode.live-server"
+            ]
+        }
+    }, 
+    // "settings": {
+    //     "pythonPath": "/usr/local/bin/octave"
+    // },
+    "runArgs": [
+        "--privileged"
+    ]
+}
