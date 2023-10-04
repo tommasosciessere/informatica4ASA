@@ -1,9 +1,9 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/alpine
 {
-	"name": "Alpine",
+	"name": "Web",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/base:alpine-3.18",
+	// "image": "mcr.microsoft.com/devcontainers/base:alpine-3.18",
 	// "features": {
 	// 	"ghcr.io/devcontainers-contrib/features/lite-server:1": {}
 	// }
@@ -15,7 +15,9 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "`php -S 0.0.0.0:8000`",
+	// "postCreateCommand": "`php -S 0.0.0.0:8000`",
+	"postCreateCommand": "php -S 0.0.0.0:4000",
+	"forwardPorts": [4000],
 
 	// Configure tool-specific properties.
 	// "customizations": {},
@@ -26,7 +28,10 @@
 	"customizations": {
         "vscode": {
             "extensions": [
-                "george-alisson.html-preview-vscode"
+                "george-alisson.html-preview-vscode",
+				"bmewburn.vscode-intelephense-client",
+				"xdebug.php-pack",
+				"xdebug.php-debug"
             ]
         }
     }
