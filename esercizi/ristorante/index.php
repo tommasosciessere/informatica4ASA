@@ -6,39 +6,103 @@
     <title>Menù ristorante Bruno Barbieri</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
+<body style="background-color: beige;">
+<nav class="navbar" style="background-color: #6f263d;">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="#">
+      <img src="https://brunobarbieri.blog/wp-content/uploads/2023/09/bruno-barbieri-header.png" alt="Logo" width="30" class="d-inline-block align-text-top nav text-white">
+      Ristorante Bruno Barbieri
+    </a>
+  </div>
+</nav>
+<div class="p-5 text-white text-center" style="background-color:#6f263d"; >
+            <img src="https://brunobarbieri.blog/wp-content/uploads/2023/09/la-mia-storia-header.png" style="width: 200px;" alt="Logo ristorante">
+            <h1>Menù Ristorante Bruno Barbieri</h1>
+            <p>The sun still rises on my kitchen</p> 
+          </div>
+  <div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://i.ytimg.com/vi/hBISM7fQTjI/maxresdefault.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Primi</h5>
+        <p>Spaghetti all'Amatriciana</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://www.wineandfoodtour.it/wp-content/uploads/2023/04/Polpette-di-Bruno-Barbieri-.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Secondi</h5>
+        <p>Polpette al sugo</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.ytimg.com/vi/jZlFXwrfqlI/sddefault.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Dolci</h5>
+        <p>Panettone</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<br>
 <?php
-$Primi=array("Riso allo zafferano", "Spaghetti all'Amatriciana", "Lasagne alla Bolognese")
-$Secondi=array("Polpette al sugo", "Spezzatino di vitello", "Salsiccia e patate al forno")
-$Dolce=array("Tiramisù", "Torta di mele", "Tortino di cioccolato con cuore fondente", "Pancake allo sciroppo d'acero")
+$Primi=array("Riso allo zafferano", "Spaghetti all'Amatriciana", "Lasagne alla Bolognese");
+$Secondi=array("Polpette al sugo", "Spezzatino di vitello", "Salsiccia e patate al forno");
+$Dolce=array("Tiramisù", "Panettone", "Tortino di cioccolato con cuore fondente");
 ?>
-<table class="table">
+<table class="table" style="background-color: beige;">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">1</th>
+      <th scope="col">2</th>
+      <th scope="col">3</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row">Primi</th>
+      <?php
+      for($i=0; $i<3; $i++)
+      {
+        echo "<td>".$Primi[$i]. "</td>";
+      }
+      ?>
     </tr>
     <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <th scope="row">Secondi</th>
+      <?php
+      for($i=0; $i<3; $i++)
+      {
+         echo "<td>".$Secondi[$i]."</td>";
+      }
+      ?>
     </tr>
     <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
+      <th scope="row">Dolci</th>
+      <?php
+      for($i=0; $i<3; $i++)
+      {
+         echo "<td>".$Dolce[$i]."</td>";
+      }
+      ?>
     </tr>
   </tbody>
 </table>
+</body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </html>
