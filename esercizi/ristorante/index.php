@@ -60,9 +60,9 @@
 </div>
 <br>
 <?php
-$Primi=array("Riso allo zafferano", "Spaghetti all'Amatriciana", "Lasagne alla Bolognese");
-$Secondi=array("Polpette al sugo", "Spezzatino di vitello", "Salsiccia e patate al forno");
-$Dolce=array("Tiramisù", "Panettone", "Tortino di cioccolato con cuore fondente");
+$Primi=array("Riso allo zafferano"=>"7,00€", "Spaghetti all'Amatriciana"=>"7,50€", "Lasagne alla Bolognese"=>"6,50€");
+$Secondi=array("Polpette al sugo"=>"7,00€", "Spezzatino di vitello"=>"8,70€", "Salsiccia e patate al forno"=>"7,50€");
+$Dolce=array("Tiramisù"=>"5,00€", "Panettone"=>"4,50€", "Tortino di cioccolato con cuore fondente"=>"6,00€");
 ?>
 <table class="table" style="background-color: beige;">
   <thead>
@@ -77,27 +77,27 @@ $Dolce=array("Tiramisù", "Panettone", "Tortino di cioccolato con cuore fondente
     <tr>
       <th scope="row">Primi</th>
       <?php
-      for($i=0; $i<3; $i++)
+      foreach($Primi as $Nome=>$Prezzo)
       {
-        echo "<td>".$Primi[$i]. "</td>";
+        echo "<td>".$Nome. "<br>".$Prezzo. "</td>";
       }
       ?>
     </tr>
     <tr>
       <th scope="row">Secondi</th>
-      <?php
-      for($i=0; $i<3; $i++)
+       <?php
+      foreach($Secondi as $Nome=>$Prezzo)
       {
-         echo "<td>".$Secondi[$i]."</td>";
+        echo "<td>".$Nome. "<br>".$Prezzo. "</td>";
       }
       ?>
     </tr>
     <tr>
       <th scope="row">Dolci</th>
       <?php
-      for($i=0; $i<3; $i++)
+      foreach($Dolce as $Nome=>$Prezzo)
       {
-         echo "<td>".$Dolce[$i]."</td>";
+        echo "<td>".$Nome. "<br>".$Prezzo. "</td>";
       }
       ?>
     </tr>
