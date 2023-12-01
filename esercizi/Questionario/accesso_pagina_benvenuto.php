@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Menù Pizzeria</title>
+    <title>Form informazioni</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body style="background-color: <?=$_GET['Colore']?>">
@@ -12,27 +12,22 @@
     <?=$_GET['Cognome']?>
     </h1>
       <table class="table table-info">
-  <thead>
-     <tr>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>Nome</td>
+      <td>Cognome</td>
+      <td>Età</td>
+      <td>Sport preferito</td>
+      <td>Colore</td>
+      <td>Password</td>
     </tr>
     <tr>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <td >Larry the Bird</td>
-<td>@twitter</td>
+      <td><?=$_GET['Nome']?></td>
+      <td><?=$_GET['Cognome']?></td>
+      <td><?=$_GET['Età']?></td>
+      <td><?=$_GET['Sport preferito']?></td>
+      <td><?=$_GET['Colore']?></td>
+      <td><?=$_GET['Password']?></td>
     </tr>
   </tbody>
 </table>
